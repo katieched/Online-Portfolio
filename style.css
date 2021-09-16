@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    background-color: #42426F;
+}
+
+/*Navbar styling*/
+header h1, a {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover {
+    color:#ffe4e1;
+}
+/*end of navbar styling*/
+
+p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
