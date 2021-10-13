@@ -56,7 +56,7 @@ header {
   }
   
   @keyframes animated-cursor{
-    from{border-right-color: rgba(225,228,225, 1);}
+    from{border-right-color: rgba(225, 193, 203, 1);}
     to{border-right-color: transparent;}
   }
 /*end of cursor animation*/
@@ -65,7 +65,7 @@ header {
 /*Background Animation*/
  .area{
     background: #42426F;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    background: -webkit-linear-gradient(to left, #ffe4e1, #ffa7b6);  
     width: 100%;
     height:80vh;
 }
@@ -84,7 +84,7 @@ header {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(225, 228, 225, 0.7);
+    background: rgba(225, 193, 203, 0.7);
     animation: animate 25s linear infinite;
     bottom: -150px;
 }
