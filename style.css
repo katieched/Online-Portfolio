@@ -6,6 +6,12 @@ body {
     background-color: #42426F;
 }
 
+/*General text styling*/
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+}
+
 /*Navbar styling*/
 header h1, a {
     font-family: 'Montserrat', sans-serif;
@@ -60,6 +66,23 @@ header {
     to{border-right-color: transparent;}
   }
 /*end of cursor animation*/
+
+
+/*Profile links styling*/
+.profileLinks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profileLinks a img:hover {
+    color:#ffe4e1;
+}
+
+#linkedin {
+    width: 90%;
+    height: 90%;
+}
+/*end of profile links styling*/
 
 
 /*Background Animation*/
