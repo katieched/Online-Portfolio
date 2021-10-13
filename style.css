@@ -6,6 +6,12 @@ body {
     background-color: #42426F;
 }
 
+/*General text styling*/
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+}
+
 /*Navbar styling*/
 header h1, a {
     font-family: 'Montserrat', sans-serif;
