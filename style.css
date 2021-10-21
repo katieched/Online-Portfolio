@@ -1,6 +1,7 @@
 /*TO DO:
     - Fix profile links so they don't go outside of the div when you zoom in
     - Fix image size to be more responsive
+    - Fix bubbles to show on entire page
 */
 
 * {
@@ -47,7 +48,7 @@ header {
 
 /*main page styling*/
 #home {
-    height: 70vh;
+    height: 80vh;
 }
 /*end of main page styling*/
 
@@ -84,7 +85,7 @@ header {
 .profileLinks {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25em;
+    margin-top: 28em;
     margin-bottom: 5em;
 }
 
@@ -97,7 +98,7 @@ header {
 #aboutMe {
     background-color: #fdf1f0;
     font-family: 'Montserrat', sans-serif;
-    height: 80vh;
+    height: 100vh;
 }
 
 #aboutMe h1 {
@@ -131,7 +132,7 @@ header {
 /*Project section styling*/
 #projects {
     font-family: 'Montserrat', sans-serif;
-    height: 80vh;
+    height: 100vh;
 }
 
 #projects h1 {
@@ -152,7 +153,7 @@ header {
 #contactMe {
     background-color: #fdf1f0;
     font-family: 'Montserrat', sans-serif;
-    height: 80vh;
+    height: 100vh;
 }
 
 #contactMe h1 {
@@ -164,13 +165,6 @@ header {
 
 
 /*Background Animation*/
- .area{
-    background: #f0fcfd;  
-    background: -webkit-linear-gradient(to left, #ffe4e1, #ffa7b6);  
-    width: 100%;
-    height:100;
-}
-
 .circles{
     top: 0;
     left: 0;
@@ -186,7 +180,7 @@ header {
     width: 20px;
     height: 20px;
     background: rgba(66, 66, 111, 0.7);
-    animation: animate 25s linear infinite;
+    animation: animate 50s linear infinite;
     bottom: -150px;
 }
 
@@ -203,7 +197,7 @@ header {
     width: 20px;
     height: 20px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 40s;
 }
 
 .circles li:nth-child(3){
