@@ -1,3 +1,8 @@
+/*TO DO:
+    - Fix profile links so they don't go outside of the div when you zoom in
+    - Fix image size to be more responsive
+*/
+
 * {
     box-sizing: border-box;
 }
@@ -40,6 +45,13 @@ header {
 /*end of navbar styling*/
 
 
+/*main page styling*/
+#home {
+    height: 70vh;
+}
+/*end of main page styling*/
+
+
 /*cursor animation*/
 #cursorText {
     border-right: solid 3px rgba(66, 66, 111, 1);
@@ -72,16 +84,12 @@ header {
 .profileLinks {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 500px;
+    margin-top: 25em;
+    margin-bottom: 5em;
 }
 
 .profileLinks a img:hover {
     color:#ffe4e1;
-}
-
-#linkedin {
-    width: 90%;
-    height: 90%;
 }
 /*end of profile links styling*/
 
@@ -89,6 +97,7 @@ header {
 #aboutMe {
     background-color: #fdf1f0;
     font-family: 'Montserrat', sans-serif;
+    height: 80vh;
 }
 
 #aboutMe h1 {
@@ -117,6 +126,42 @@ header {
     padding-bottom: 10%;
 }
 /*end of about me styling*/
+
+
+/*Project section styling*/
+#projects {
+    font-family: 'Montserrat', sans-serif;
+    height: 80vh;
+}
+
+#projects h1 {
+    font-size: 3rem;
+    padding-top: 10%;
+    padding-left: 15%;
+}
+
+#projects p {
+    font-size: 1.5rem;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+/*end of project section styling*/
+
+
+/*Contact me styling*/
+#contactMe {
+    background-color: #fdf1f0;
+    font-family: 'Montserrat', sans-serif;
+    height: 80vh;
+}
+
+#contactMe h1 {
+    font-size: 3rem;
+    padding-top: 10%;
+    padding-left: 15%;
+}
+/*end of contact me styling*/
+
 
 /*Background Animation*/
  .area{
