@@ -19,6 +19,17 @@ p {
 }
 
 /*Navbar styling*/
+#logo {
+    width:fit-content;
+    height: 10vh;
+    padding-right: 1rem;
+}
+
+#nameAndLogo {
+    display: flex;
+    justify-content: flex-start;
+}
+
 header h1, a {
     font-family: 'Montserrat', sans-serif;
     color: #42426f;
@@ -60,7 +71,7 @@ header {
     overflow: hidden;    
     font-family: 'Montserrat', sans-serif;    
     font-size: 3rem;
-    color: rgba(66, 66, 111,.70);
+    color: rgba(66, 66, 111);
     margin: 100px auto;
   }
   
