@@ -37,7 +37,7 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 1rem;
 }
 
 .nav-links li a:hover {
@@ -55,11 +55,11 @@ header {
 
 /*cursor animation*/
 #cursorText {
-    border-right: solid 3px rgba(66, 66, 111, 1);
+    border-right: solid 0.275rem rgba(66, 66, 111, 1);
     white-space: nowrap;
     overflow: hidden;    
     font-family: 'Montserrat', sans-serif;    
-    font-size: 60px;
+    font-size: 3rem;
     color: rgba(66, 66, 111,.70);
     margin: 100px auto;
   }
@@ -71,7 +71,7 @@ header {
   
   @keyframes animated-text{
     from{width: 0;}
-    to{width: 365px;}
+    to{width: 18rem;}
   }
   
   @keyframes animated-cursor{
@@ -114,7 +114,7 @@ header {
 }
 
 #aboutMe img {
-    border: 5px solid rgba(0, 0, 0, 0.7);
+    border: 0.5rem solid rgba(0, 0, 0, 0.7);
     border-radius: 40%;
     width: 20%;
     height: 20%;
