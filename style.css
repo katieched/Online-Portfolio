@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #f0fcfd
+    background-color: #f0fcfd;
 }
 
 /*General text styling*/
@@ -73,7 +73,7 @@ header {
     font-family: 'Montserrat', sans-serif;    
     font-size: 3rem;
     color: rgba(66, 66, 111);
-    margin: 100px auto;
+    margin: 8rem auto;
   }
   
   #cursorText {
@@ -103,6 +103,80 @@ header {
     opacity: 0.6;
 }
 /*end of profile links styling*/
+
+
+/*Scroll down arrow animation*/
+.arrow-down{
+    width:3rem;
+    height: 2rem;
+    margin:0 0 0 -1.5rem;
+    position:absolute;
+    left:50%;
+    bottom:0px;
+    -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+    
+  }
+  
+  .arrow-down:hover{
+     -webkit-animation-play-state: paused;
+  }
+  
+  .left{
+    position:absolute;
+    height: 0.5rem;
+    width:2rem;
+    background: #42426f;
+    -webkit-transform:rotate(240deg);
+    top: 0.5rem;
+    left: 0.5rem;
+    -webkit-border-radius: 0.2rem;
+    -webkit-transform-origin: 0.25rem 50%;
+    -webkit-animation: leftArrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  .right{
+    position:absolute;
+    height: 0.5rem;
+    width: 2rem;
+    background: #42426f;
+    -webkit-transform:rotate(-60deg);
+    top:0.5rem;
+    left:0.5rem;
+    -webkit-border-radius: 0.2rem;
+    -webkit-transform-origin: 0.25rem 50%;
+    -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  
+  
+  
+  @keyframes arrow{
+    0% {
+      bottom:0;
+    }
+    100%{
+      bottom:2rem;
+    }
+  }
+  
+  
+  @keyframes leftArrow{
+    0% {
+    }
+    100%{
+      -webkit-transform:rotate(225deg);
+    }
+  }
+  
+  @keyframes rightArrow{
+    0% {
+    }
+    100%{
+      -webkit-transform:rotate(-45deg);
+    }
+  }
+/*end of scroll down arrow animation*/
+
 
 /*About me styling*/
 #aboutMe {
