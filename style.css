@@ -238,7 +238,7 @@ header {
 #projectContainer {
     margin: 5% 15% 0% 15%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -251,13 +251,46 @@ header {
     display: flex;
     justify-content: space-evenly;
     margin-right: 2rem;
+    margin-top: 3rem;
     font-size: 1.5rem;
 }
 
 .projectImage {
-    width: 45%;
+    width: 30rem;
     height: auto;
     border-radius: 5%;
+}
+
+@media (max-width: 1200px) {
+    #projectContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10%;
+    }
+
+    .projectDescription {
+        font-size: 1.2rem;
+        margin-right: 0rem;
+    }
+
+    .projectLinks {
+        margin-right: 0;
+    }
+
+    .projectImage {
+        width: 28rem;
+        height: auto;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .projectImage {
+        width: 20rem;
+        height: auto;
+        margin-top: 2rem;
+    }
 }
 
 #arrows {
@@ -268,7 +301,7 @@ header {
 }
 
 #backArrow {
-    width: 5%;
+    width: 3rem;
     height: auto;
     opacity: 0.8;
 }
@@ -279,7 +312,7 @@ header {
 }
 
 #nextArrow {
-    width: 5%;
+    width: 3rem;
     height: auto;
     opacity: 0.8;
 }
