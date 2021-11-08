@@ -149,9 +149,6 @@ header {
     -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
   }
   
-  
-  
-  
   @keyframes arrow{
     0% {
       bottom:0;
@@ -160,7 +157,6 @@ header {
       bottom:2rem;
     }
   }
-  
   
   @keyframes leftArrow{
     0% {
