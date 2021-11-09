@@ -28,6 +28,7 @@ p {
 #nameAndLogo {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 header h1, a {
@@ -54,12 +55,16 @@ header {
 .nav-links li a:hover {
     color:rgba(66, 66, 111, 0.5);
 }
+
+@media screen and (max-width: 850px) {
+    
+}
 /*end of navbar styling*/
 
 
 /*main page styling*/
 #home {
-    height: fit-content;
+    height: 75vh;
 }
 /*end of main page styling*/
 
@@ -93,6 +98,13 @@ header {
 
 
 /*Profile links styling*/
+@media (max-width: 800px) {
+    #linkedin, #emailIcon, #github {
+        width: 5rem;
+        height: auto;
+    }
+}
+
 .profileLinks {
     display: flex;
     justify-content: space-evenly;
