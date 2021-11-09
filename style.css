@@ -59,7 +59,7 @@ header {
 
 /*main page styling*/
 #home {
-    height: 80vh;
+    height: fit-content;
 }
 /*end of main page styling*/
 

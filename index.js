@@ -1,6 +1,8 @@
+//arrow buttons
 const nextArrow = document.getElementById('nextArrow');
 const backArrow = document.getElementById('backArrow');
 
+//project container elements
 const projectContainer = document.getElementById('projectContainer');
 const projectTitle = document.querySelector('.projectTitle');
 const projectDescription = document.querySelector('.projectDescription');
@@ -8,6 +10,7 @@ const projectImage = document.querySelector('.projectImage');
 const siteLink = document.getElementById('siteLink');
 const repoLink = document.getElementById('repoLink');
 
+//project details
 const projectTitles = [ 'TravelShare', 'HabiPad'];
 
 const projectDescriptions = [
@@ -30,8 +33,7 @@ const repoLinks = [
     "https://github.com/Forum-123/Lap-2-Project-Server"
 ];
 
-
-
+//functions and event listeners to display projects
 let arrayIndex = 0;
 
 function nextProject(e) {
@@ -59,3 +61,15 @@ backArrow.addEventListener('click', e => {
     previousProject(e);
     displayProject(e);
 });
+
+
+//send an email
+const emailIcon = document.getElementById('emailIcon');
+
+function sendEmail(e) {
+    window.open('mailto:katieched98@hotmail.co.uk');
+}
+
+emailIcon.addEventListener('click', e => {
+    sendEmail(e);
+})
