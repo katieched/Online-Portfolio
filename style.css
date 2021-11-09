@@ -1,7 +1,7 @@
 /*TO DO:
     - Fix profile links so they don't go outside of the div when you zoom in
-    - Fix image size to be more responsive
-    - Fix bubbles to show on entire page
+    - Add link to email icon
+    - Make arrows stay in place
 */
 
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #f0fcfd
+    background-color: #f0fcfd;
 }
 
 /*General text styling*/
@@ -19,6 +19,18 @@ p {
 }
 
 /*Navbar styling*/
+#logo {
+    width:fit-content;
+    height: 10vh;
+    padding-right: 1rem;
+}
+
+#nameAndLogo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 header h1, a {
     font-family: 'Montserrat', sans-serif;
     color: #42426f;
@@ -37,31 +49,35 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 1rem;
 }
 
 .nav-links li a:hover {
     color:rgba(66, 66, 111, 0.5);
+}
+
+@media screen and (max-width: 850px) {
+    
 }
 /*end of navbar styling*/
 
 
 /*main page styling*/
 #home {
-    height: 80vh;
+    height: 75vh;
 }
 /*end of main page styling*/
 
 
 /*cursor animation*/
 #cursorText {
-    border-right: solid 3px rgba(66, 66, 111, 1);
+    border-right: solid 0.275rem rgba(66, 66, 111, 1);
     white-space: nowrap;
     overflow: hidden;    
     font-family: 'Montserrat', sans-serif;    
-    font-size: 60px;
-    color: rgba(66, 66, 111,.70);
-    margin: 100px auto;
+    font-size: 3rem;
+    color: rgba(66, 66, 111);
+    margin: 8rem auto;
   }
   
   #cursorText {
@@ -71,7 +87,7 @@ header {
   
   @keyframes animated-text{
     from{width: 0;}
-    to{width: 365px;}
+    to{width: 18rem;}
   }
   
   @keyframes animated-cursor{
@@ -82,23 +98,112 @@ header {
 
 
 /*Profile links styling*/
+@media (max-width: 800px) {
+    #linkedin, #emailIcon, #github {
+        width: 5rem;
+        height: auto;
+    }
+}
+
 .profileLinks {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 28em;
-    margin-bottom: 5em;
 }
 
 .profileLinks a img:hover {
-    color:#ffe4e1;
+    opacity: 0.6;
 }
 /*end of profile links styling*/
 
+
+/*Scroll down arrow animation*/
+.arrow-down{
+    display: flex;
+    justify-content: center;
+    width:3rem;
+    height: 2rem;
+    margin:0 0 0 -1.5rem;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+    
+  }
+  
+  .arrow-down:hover{
+     -webkit-animation-play-state: paused;
+  }
+  
+  .left{
+    position:absolute;
+    height: 0.5rem;
+    width:2rem;
+    background: #42426f;
+    -webkit-transform:rotate(240deg);
+    top: 0.5rem;
+    left: 0.5rem;
+    -webkit-border-radius: 0.2rem;
+    -webkit-transform-origin: 0.25rem 50%;
+    -webkit-animation: leftArrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  .right{
+    position:absolute;
+    height: 0.5rem;
+    width: 2rem;
+    background: #42426f;
+    -webkit-transform:rotate(-60deg);
+    top:0.5rem;
+    left:0.5rem;
+    -webkit-border-radius: 0.2rem;
+    -webkit-transform-origin: 0.25rem 50%;
+    -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
+  }
+  
+  @keyframes arrow{
+    0% {
+      bottom:0;
+    }
+    100%{
+      bottom:2rem;
+    }
+  }
+  
+  @keyframes leftArrow{
+    0% {
+    }
+    100%{
+      -webkit-transform:rotate(225deg);
+    }
+  }
+  
+  @keyframes rightArrow{
+    0% {
+    }
+    100%{
+      -webkit-transform:rotate(-45deg);
+    }
+  }
+/*end of scroll down arrow animation*/
+
+
 /*About me styling*/
+@media (max-width: 1000px) {
+    #aboutMe div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #aboutMe img {
+        margin-left: 10%;
+    }
+}
 #aboutMe {
     background-color: #fdf1f0;
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: fit-content;
 }
 
 #aboutMe h1 {
@@ -108,22 +213,22 @@ header {
 }
 
 #aboutMe p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-left: 15%;
     padding-right: 10%;
 }
 
 #aboutMe img {
-    border: 5px solid rgba(0, 0, 0, 0.7);
-    border-radius: 40%;
-    width: 20%;
-    height: 20%;
-    margin-right: 15%;
-}
+        border-radius: 5%;
+        height: 25rem;
+        width: auto;
+        margin-right: 10%;
+ }
 
 #aboutMe div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 10%;
 }
 /*end of about me styling*/
@@ -132,19 +237,100 @@ header {
 /*Project section styling*/
 #projects {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: fit-content;
 }
 
 #projects h1 {
     font-size: 3rem;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-left: 15%;
 }
 
-#projects p {
+#projectContainer {
+    margin: 5% 15% 0% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectDescription {
     font-size: 1.5rem;
-    padding-left: 15%;
-    padding-right: 10%;
+    margin-right: 3rem;
+}
+
+.projectLinks {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.projectImage {
+    width: 30rem;
+    height: auto;
+    border-radius: 5%;
+}
+
+@media (max-width: 1200px) {
+    #projectContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10%;
+    }
+
+    .projectDescription {
+        font-size: 1.2rem;
+        margin-right: 0rem;
+    }
+
+    .projectLinks {
+        margin-right: 0;
+    }
+
+    .projectImage {
+        width: 28rem;
+        height: auto;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .projectImage {
+        width: 20rem;
+        height: auto;
+        margin-top: 2rem;
+    }
+}
+
+#arrows {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+#backArrow {
+    width: 3rem;
+    height: auto;
+    opacity: 0.8;
+}
+
+#backArrow:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#nextArrow {
+    width: 3rem;
+    height: auto;
+    opacity: 0.8;
+}
+
+#nextArrow:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 /*end of project section styling*/
 
@@ -153,7 +339,7 @@ header {
 #contactMe {
     background-color: #fdf1f0;
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: fit-content;
 }
 
 #contactMe h1 {
@@ -161,10 +347,66 @@ header {
     padding-top: 10%;
     padding-left: 15%;
 }
+
+form {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 1000px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+#leftForm {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+#name, #email, #subject {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#rightForm {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    align-items: flex-end;
+}
+
+#message {
+    width: 100%;
+    height: 9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#sendMessage {
+    width: 10rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.8rem;
+}
 /*end of contact me styling*/
 
 
 /*Background Animation*/
+/*
 .circles{
     top: 0;
     left: 0;
@@ -274,4 +516,5 @@ header {
         border-radius: 80%;
     }
 }
+*/
 /*end of background animation*/
