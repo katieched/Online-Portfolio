@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="./style.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="./images/KC.png" type="image/x-icon">
+    <script defer src="./index.js"></script>
     <title>Katie Chedgzoy</title>
 </head>
 <body>
     <header>
-        <h1>Katie Chedgzoy</h1>
+        <div id="nameAndLogo">
+            <img src="images/KC.png" id="logo">
+            <h1>Katie Chedgzoy</h1>
+        </div>
 
         <nav>
             <ul class="nav-links">
@@ -19,46 +24,100 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contactMe">Contact Me</a></li>
             </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
-    <div id="home">
+    <section id="home">
         <p id="cursorText">Hello there!</p>
 
         <div class="profileLinks">
             <a href="https://www.linkedin.com/in/katie-chedgzoy-61258318b/">
                 <img src="images/LindkeInLogo.png" id="linkedin">
             </a>
+            <a href="">
+                <img src="images/envelope.png" id="emailIcon">
+            </a>
             <a href="https://github.com/katieched">
                 <img src="images/GitHub-Mark-120px-plus.png" id="github">
             </a>
         </div>
-    </div>
 
-    <div id="aboutMe">
+        <div class="arrow-down">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </section>
+
+    
+
+    <section id="aboutMe">
         <h1>About Me</h1>
 
         <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                mollit anim id est laborum.</p>
+            <p>Hi, I’m Katie Chedgzoy! I recently graduated with a first class Masters degree 
+                in Mathematics from the Uni of York, and I’m currently training to be a full 
+                stack developer with Futureproof.<br>
+                <br>I was first introduced to coding during my degree, and have been fascinated ever 
+                since. In just a few weeks at Futureproof, I’ve learnt how to create full stack web 
+                applications, and I can’t wait to learn more.<br>
+                <br>I’m always looking for something new to learn or a new problem to solve. I’m excited 
+                to pursue a career in technology where I can challenge myself this way and further my 
+                programming knowledge!<br>
+                <br>When I’m not busy programming, I love reading, travelling, and playing the drums.
+            </p>
             
-            <img src="images/ImagePlaceholder.png">
+            <img src="images/ProfilePic.JPG">
         </div>
-    </div>
+    </section>
 
-    <div id="projects">
+    <section id="projects">
         <h1>Projects</h1>
 
-        <p>Projects will be coming soon!</p>
-    </div>
+        <div id="projectContainer">
+            <div>
+                <h2 class="projectTitle">TravelShare</h2>
+                <p class="projectDescription">TravelShare is an anonymous blogging website that allows 
+                    users to make posts about their travel experiences. HTML, CSS and JavaScript were
+                    used to create the front-end, whilst node.js and express were used to create the
+                    back-end. The server for this app was deployed using Heroku.</p>
 
-    <div id="contactMe">
+                <div class="projectLinks">
+                    <a href="https://bagels-journal-project.netlify.app/client/html/mainpage" id="siteLink">Site</a>
+                    <a href="https://github.com/Rachiey/journalproject" id="repoLink">Repo</a>
+                </div>
+            </div>
+
+            <img src="images/TravelShare.png" class="projectImage">
+        </div>
+
+        <div id="arrows">
+            <img src="images/back-arrow.png" id="backArrow">
+            <img src="images/next-arrow.png" id="nextArrow">
+        </div>
+    </section>
+
+    <section id="contactMe">
         <h1>Contact Me</h1>
-    </div>
+
+        <form>
+            <div id="leftForm">
+                <input type="text" placeholder="Your Name" id="name">
+                <input type="text" placeholder="Your email" id="email">
+                <input type="text" placeholder="Subject" id="subject">
+            </div>
+
+            <div id="rightForm">
+                <textarea placeholder="Your message" id="message"></textarea>
+                <input type="Submit" value="Send Message" id="sendMessage">
+            </div>
+        </form>
+    </section>
     
     <!--Background animation-->
     <!--
