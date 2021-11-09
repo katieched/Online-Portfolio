@@ -35,7 +35,7 @@
                 <img src="images/LindkeInLogo.png" id="linkedin">
             </a>
             <a href="">
-                <img src="images/envelope.png" id="email">
+                <img src="images/envelope.png" id="emailIcon">
             </a>
             <a href="https://github.com/katieched">
                 <img src="images/GitHub-Mark-120px-plus.png" id="github">
@@ -82,8 +82,8 @@
                     back-end. The server for this app was deployed using Heroku.</p>
 
                 <div class="projectLinks">
-                    <a href="https://bagels-journal-project.netlify.app/client/html/mainpage">Site</a>
-                    <a href="https://github.com/Rachiey/journalproject">Repo</a>
+                    <a href="https://bagels-journal-project.netlify.app/client/html/mainpage" id="siteLink">Site</a>
+                    <a href="https://github.com/Rachiey/journalproject" id="repoLink">Repo</a>
                 </div>
             </div>
 
@@ -98,6 +98,19 @@
 
     <section id="contactMe">
         <h1>Contact Me</h1>
+
+        <form>
+            <div id="leftForm">
+                <input type="text" placeholder="Your Name" id="name">
+                <input type="text" placeholder="Your email" id="email">
+                <input type="text" placeholder="Subject" id="subject">
+            </div>
+
+            <div id="rightForm">
+                <textarea placeholder="Your message" id="message"></textarea>
+                <input type="Submit" value="Send Message" id="sendMessage">
+            </div>
+        </form>
     </section>
     
     <!--Background animation-->

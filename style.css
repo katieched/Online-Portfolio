@@ -1,8 +1,7 @@
 /*TO DO:
     - Fix profile links so they don't go outside of the div when you zoom in
-    - Fix image size to be more responsive
-    - Fix bubbles to show on entire page
     - Add link to email icon
+    - Make arrows stay in place
 */
 
 * {
@@ -335,6 +334,61 @@ header {
     font-size: 3rem;
     padding-top: 10%;
     padding-left: 15%;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 1000px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+#leftForm {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+#name, #email, #subject {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#rightForm {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    align-items: flex-end;
+}
+
+#message {
+    width: 100%;
+    height: 9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#sendMessage {
+    width: 10rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.8rem;
 }
 /*end of contact me styling*/
 
