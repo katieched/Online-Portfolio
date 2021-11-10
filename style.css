@@ -1,9 +1,3 @@
-/*TO DO:
-    - Fix profile links so they don't go outside of the div when you zoom in
-    - Add link to email icon
-    - Make arrows stay in place
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -50,6 +44,7 @@ header {
 .nav-links li {
     display: inline-block;
     padding: 0 1rem;
+    font-weight: bold;
 }
 
 .nav-links li a:hover {
