@@ -117,6 +117,11 @@ header {
 
 
 /*Scroll down arrow animation*/
+@media (max-width: 700px) {
+    .arrow-down div {
+        display: none;
+    }
+}
 .arrow-down{
     display: flex;
     justify-content: center;
@@ -348,12 +353,46 @@ header {
     padding-left: 15%;
 }
 
+#contactIcons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1000px) {
+    #contactIcons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#contactIcons p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#contactIcons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactIcons img {
+    width: 5rem;
+    height: auto;
+    border: 5px solid rgba(2, 2, 2, 0.6);
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: white;
+}
+
+
 form {
     display: flex;
     justify-content: space-between;
     padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 10%;
+    margin-top: 2.5%;
 }
 
 @media (max-width: 1000px) {
@@ -401,6 +440,11 @@ form {
     margin-top: 2rem;
     font-family: 'Montserrat', sans-serif;
     padding: 0.8rem;
+    font-weight: bold;
+}
+
+#sendMessage:hover {
+    cursor: pointer;
 }
 /*end of contact me styling*/
 
