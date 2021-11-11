@@ -14,8 +14,8 @@ p {
 
 /*Navbar styling*/
 #logo {
-    width:fit-content;
-    height: 10vh;
+    width: 7rem;
+    height: auto;
     padding-right: 1rem;
 }
 
