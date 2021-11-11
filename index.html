@@ -31,7 +31,7 @@
                 <span class="bar"></span>
             </div>
 
-            <ul class="burger-links">
+            <ul class="burger-links" id="burger-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#aboutMe">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -124,34 +124,20 @@
             </div>  
         </div>
 
-        <form>
+        <form id="form" action="https://formspree.io/f/mayarnqr" method="POST">
             <div id="leftForm">
-                <input type="text" placeholder="Your Name" id="name">
-                <input type="text" placeholder="Your email" id="email">
-                <input type="text" placeholder="Subject" id="subject">
+                <input type="text" placeholder="Your Name" id="name" name="name">
+                <input type="text" placeholder="Your email" id="email" name="email">
+                <input type="text" placeholder="Subject" id="subject" name="subject">
             </div>
 
             <div id="rightForm">
-                <textarea placeholder="Your message" id="message"></textarea>
+                <textarea placeholder="Your message" id="message" name="message"></textarea>
                 <input type="Submit" value="Send Message" id="sendMessage">
             </div>
+
+            <p id="formStatus"></p>
         </form>
     </section>
-    
-    <!--Background animation-->
-    <!--
-    <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-    </ul>
-    -->
 </body>
 </html>

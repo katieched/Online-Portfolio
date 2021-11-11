@@ -78,7 +78,7 @@ emailIcon.addEventListener('click', e => {
 //hamburger functionality
 const navLinks = document.querySelector('.nav-links');
 const hamburger = document.querySelector('.hamburger');
-const burgerLinks = document.querySelector('.burger-links');
+const burgerLinks = document.getElementById('burger-links');
 
 let clickCount = 0;
 
@@ -97,4 +97,33 @@ function hamburgerExpansion(e) {
 
 hamburger.addEventListener('click', (e) => {
     hamburgerExpansion(e);
+})
+
+
+//submitting contact form
+
+// const form = document.getElementById('form');
+// const formStatus = document.getElementById('formStatus');
+// function submitForm(e) {
+//     const options = {
+//         method: form.method,
+//         body: data,
+//         headers: {
+//             "Accept": "application/json"
+//         },
+//     }
+
+//     fetch("https://formspree.io/f/mayarnqr", options)
+//         .then(response => {
+//         formStatus.textContent = "Thanks for sending your message!";
+//         form.reset();  
+//     }).catch(error => {
+//         formStatus.textContent = "Oops! There was a problem sending your message."
+//     });
+// };
+
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
+//     submitForm(e);
+// })
 })
