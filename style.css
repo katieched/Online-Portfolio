@@ -341,12 +341,13 @@ header {
     justify-content: space-evenly;
     margin-top: 7rem;
     margin-bottom: 4rem;
+    position: sticky;
 }
 
 #backArrow {
     width: 3rem;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.8;#
 }
 
 #backArrow:hover {
@@ -357,7 +358,7 @@ header {
 #nextArrow {
     width: 3rem;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.8;#
 }
 
 #nextArrow:hover {
