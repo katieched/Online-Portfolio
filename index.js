@@ -78,7 +78,7 @@ emailIcon.addEventListener('click', e => {
 //hamburger functionality
 const navLinks = document.querySelector('.nav-links');
 const hamburger = document.querySelector('.hamburger');
-const burgerLinks = document.querySelector('.burger-links');
+const burgerLinks = document.getElementById('burger-links');
 
 let clickCount = 0;
 

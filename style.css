@@ -65,7 +65,7 @@ header {
     background-color: #42426F;
 }
 
-.burger-links {
+#burger-links {
     display: none;
 }
 
@@ -378,6 +378,13 @@ header {
     font-size: 3rem;
     padding-top: 10%;
     padding-left: 15%;
+}
+
+@media (max-width: 500px) {
+    #contactMe h1 {
+        text-align: center;
+        padding-left: 0;
+    }
 }
 
 #contactIcons {
