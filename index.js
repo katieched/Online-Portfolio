@@ -73,3 +73,28 @@ function sendEmail(e) {
 emailIcon.addEventListener('click', e => {
     sendEmail(e);
 })
+
+
+//hamburger functionality
+const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const burgerLinks = document.querySelector('.burger-links');
+
+let clickCount = 0;
+
+function hamburgerExpansion(e) {
+    clickCount++;
+
+    console.log(clickCount);
+
+    if(clickCount % 2 === 1) {
+        burgerLinks.style.display === 'block';
+    }
+    else {
+        burgerLinks.style.display === 'none';
+    }
+}
+
+hamburger.addEventListener('click', (e) => {
+    hamburgerExpansion(e);
+})
