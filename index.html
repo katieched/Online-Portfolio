@@ -124,17 +124,19 @@
             </div>  
         </div>
 
-        <form>
+        <form id="form" action="https://formspree.io/f/mayarnqr" method="POST">
             <div id="leftForm">
-                <input type="text" placeholder="Your Name" id="name">
-                <input type="text" placeholder="Your email" id="email">
-                <input type="text" placeholder="Subject" id="subject">
+                <input type="text" placeholder="Your Name" id="name" name="name">
+                <input type="text" placeholder="Your email" id="email" name="email">
+                <input type="text" placeholder="Subject" id="subject" name="subject">
             </div>
 
             <div id="rightForm">
-                <textarea placeholder="Your message" id="message"></textarea>
+                <textarea placeholder="Your message" id="message" name="message"></textarea>
                 <input type="Submit" value="Send Message" id="sendMessage">
             </div>
+
+            <p id="formStatus"></p>
         </form>
     </section>
     
