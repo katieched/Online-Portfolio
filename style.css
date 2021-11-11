@@ -51,8 +51,33 @@ header {
     color:rgba(66, 66, 111, 0.5);
 }
 
-@media screen and (max-width: 850px) {
-    
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #42426F;
+}
+
+.burger-links {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+    }
 }
 /*end of navbar styling*/
 
@@ -117,13 +142,20 @@ header {
         display: none;
     }
 }
+
+@media (max-height: 700px )  {
+    .arrow-down div {
+        display: none;
+    }
+}
+
 .arrow-down{
     display: flex;
     justify-content: center;
     width:3rem;
     height: 2rem;
     margin:0 0 0 -1.5rem;
-    position:absolute;
+    position: absolute;
     left:50%;
     bottom:0;
     -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
