@@ -84,18 +84,16 @@ const navLinks = document.querySelector('.nav-links');
 const hamburger = document.querySelector('.hamburger');
 const burgerLinks = document.getElementById('burger-links');
 
-let clickCount = 0;
+let showHamburger = false;
 
 function hamburgerExpansion(e) {
-    clickCount++;
+    showHamburger = !showHamburger
 
-    console.log(clickCount);
-
-    if(clickCount % 2 === 1) {
-        burgerLinks.style.display === 'block';
+    if(showHamburger) {
+        burgerLinks.style.display = 'block';
     }
     else {
-        burgerLinks.style.display === 'none';
+        burgerLinks.style.display = 'none';
     }
 }
 
@@ -105,28 +103,30 @@ hamburger.addEventListener('click', (e) => {
 
 
 //submitting contact form
+const form = document.getElementById('form');
+const formStatus = document.getElementById('formStatus');
+function submitForm(e) {
+    const data = new FormData(e.target);
 
-// const form = document.getElementById('form');
-// const formStatus = document.getElementById('formStatus');
-// function submitForm(e) {
-//     const options = {
-//         method: form.method,
-//         body: data,
-//         headers: {
-//             "Accept": "application/json"
-//         },
-//     }
+    const options = {
+        method: "POST",
+        body: data,
+        headers: {
+            "Accept": "application/json"
+        }
+    }
 
-//     fetch("https://formspree.io/f/mayarnqr", options)
-//         .then(response => {
-//         formStatus.textContent = "Thanks for sending your message!";
-//         form.reset();  
-//     }).catch(error => {
-//         formStatus.textContent = "Oops! There was a problem sending your message."
-//     });
-// };
+    fetch("https://formspree.io/f/mayarnqr", options)
+        .then(response => {
+        console.log(response);
+        formStatus.textContent = "Thanks for sending your message!";
+        form.reset();  
+    }).catch(error => {
+        formStatus.textContent = "Oops! There was a problem sending your message."
+    });
+};
 
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-//     submitForm(e);
-// })
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    submitForm(e);
+})
