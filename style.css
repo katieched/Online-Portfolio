@@ -67,6 +67,13 @@ header {
 
 #burger-links {
     display: none;
+    list-style: none;
+}
+
+#hamburgerAndLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
